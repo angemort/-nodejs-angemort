@@ -1,19 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Button } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
+import logo from './components/img/logo.png';
+import Header from './components/Header';
+import Projets from './components/Projets';
+import Footers from './components/Footer';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="App Site">
+        <div className="Site-content">
+          <Header />
+          <header className="App-header">
+            <img src={ logo } className="App-logo" alt="logo" />
+            <h1 className="App-title">AngeMort</h1>
+          </header>
+          <Container>
+            <Row className="show-grid">
+              <Col xs={12} md={6}>
+                <p>Bienvenue sur le site officiel AngeMort.</p>
+              </Col>
+              <Col xs={6} md={6}>
+                <Projets />
+              </Col>
+            </Row>
+          </Container>
+        </div>
+        <Footers />
       </div>
     );
   }
