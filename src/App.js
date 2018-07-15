@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
+import './assets/css/App.css';
 import { Container, Row, Col } from 'reactstrap';
-import logo from './components/img/logo.png';
+import logo from './assets/img/logo.png';
 import Header from './components/Header';
 import Projets from './components/Projets';
 import Footers from './components/Footer';
